@@ -1,12 +1,14 @@
 import React from 'react'
 import Header from '../Header/Header'
+import Style from './Layout.module.scss'
 
 const Layout = ({children}) => { //propsでchildren.nodeを受け取れるようにする。
   return (
-    <div>
+    <div className={Style.wrapper}>
       <Header />
-      {/* JSX内にchildren.nodeを表示させる */}
-      {children} 
+      <div className={Style.main}>
+        {children} 
+      </div>
     </div>
   )
 }
